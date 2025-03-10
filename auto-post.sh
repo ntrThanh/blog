@@ -64,7 +64,7 @@ echo "  - Bỏ qua bài viết trùng: $skipped_count"
 # Tự động commit và push lên GitHub
 if (( created_count > 0 )); then
     echo "🚀 Đẩy bài viết mới lên GitHub..."
-    git add _posts/
+    git add .
     git commit -m "Thêm bài viết mới từ PDF: $(date +'%Y-%m-%d %H:%M:%S')"
     git push
     echo "✅ Hoàn thành! Trang web đã được cập nhật."
