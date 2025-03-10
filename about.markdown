@@ -4,15 +4,13 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Discover a World of Digital Knowledge – Nguyễn Trọng Thành's Ebook Library
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Welcome to your go-to destination for ebooks, created and curated by Nguyễn Trọng Thành! Explore thousands of titles across various genres: from captivating novels and self-development guides to academic resources and in-depth tech, business, and creative materials.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Key Features:
 
-
-[jekyll-organization]: https://github.com/jekyll
+- Access ebooks anytime, anywhere.
+- User-friendly interface for seamless reading.
+- Regularly updated collection with new releases.
+- Download or read online with ease.
