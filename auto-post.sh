@@ -37,12 +37,12 @@ categories: [pdf, tài liệu]
 ## 📚 Tài liệu: $title
 
 <iframe 
-    src="https://docs.google.com/viewerng/viewer?url={{ site.url }}/assets/files/$safe_filename&embedded=true" 
+    src="https://docs.google.com/viewerng/viewer?url=https://raw.githubusercontent.com/ntrThanh/blog/master/assets/files/$safe_filename&embedded=true" 
     style="width: 100%; height: 600px;" 
     frameborder="0">
 </iframe>
 
-[📥 Tải xuống PDF](./assets/files/$safe_filename)
+[📥 Tải xuống PDF](https://raw.githubusercontent.com/ntrThanh/blog/master/assets/files/$safe_filename)
 
 EOL
 
@@ -53,6 +53,7 @@ EOL
             ((skipped_count++))
         fi
     fi
+
 done
 
 # Thông báo kết quả
