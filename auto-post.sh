@@ -17,7 +17,9 @@ for file in "$PDF_DIR"/*.pdf; do
     if [ -f "$file" ]; then
         filename=$(basename -- "$file")
         title="${filename%.*}"
-        safe_filename=$(echo "$filename" | sed 's/ /%20/g')  # Mã hóa khoảng trắng
+        
+        # Mã hóa URL an toàn
+        safe_filename=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$filename'))")
 
         post_file="$POST_DIR/${DATE}-${title// /-}.md"
 
@@ -35,7 +37,7 @@ categories: [pdf, tài liệu]
 ## 📚 Tài liệu: $title
 
 <iframe 
-    src="https://docs.google.com/gview?url={{ site.url }}/assets/files/$safe_filename&embedded=true" 
+    src="https://docs.google.com/viewerng/viewer?url={{ site.url }}/assets/files/$safe_filename&embedded=true" 
     style="width: 100%; height: 600px;" 
     frameborder="0">
 </iframe>
@@ -68,3 +70,5 @@ if (( created_count > 0 )); then
 else
     echo "🔔 Không có bài viết mới để đẩy lên GitHub."
 fi
+
+exit 0
