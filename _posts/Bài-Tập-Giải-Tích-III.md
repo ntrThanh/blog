@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bài Tập Giải Tích III"
-date: 2025-03-10
+date: 2025-03-12
 categories: [pdf, tài liệu]
 ---
 
