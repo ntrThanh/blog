@@ -9,7 +9,6 @@ if [ ! -d "$PDF_DIR" ] || [ ! -d "$POST_DIR" ]; then
     exit 1
 fi
 
-DATE=$(date +'%Y-%m-%d')
 created_count=0
 skipped_count=0
 
@@ -21,7 +20,8 @@ for file in "$PDF_DIR"/*.pdf; do
         # Mã hóa URL an toàn
         safe_filename=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$filename'))")
 
-        post_file="$POST_DIR/${DATE}-${title// /-}.md"
+        # Loại bỏ ngày tháng khỏi tên file bài viết
+        post_file="$POST_DIR/${title// /-}.md"
 
         if [ ! -f "$post_file" ]; then
             echo "📝 Đang tạo bài viết cho $filename..."
@@ -30,7 +30,7 @@ for file in "$PDF_DIR"/*.pdf; do
 ---
 layout: post
 title: "$title"
-date: $DATE
+date: $(date +'%Y-%m-%d')
 categories: [pdf, tài liệu]
 ---
 
@@ -53,7 +53,6 @@ EOL
             ((skipped_count++))
         fi
     fi
-
 done
 
 # Thông báo kết quả
